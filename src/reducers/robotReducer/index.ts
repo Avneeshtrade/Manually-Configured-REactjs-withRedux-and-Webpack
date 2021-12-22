@@ -5,8 +5,11 @@ const robotInitials = {
     data:[],
     error:''
 }
-
-const RobotReducer = (state=robotInitials,action={}) =>{
+interface ActionProps{
+    type:string,
+    payload:any
+}
+const RobotReducer = (state=robotInitials,action:ActionProps = {type:'',payload:''}) =>{
     switch(action.type){
         case ROBOT_FETCH_REQUEST:
         return {

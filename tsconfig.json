@@ -1,0 +1,15 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "jsx": "react",
+    //   "baseUrl": "./",
+      "sourceMap": true,
+      "declaration": false,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "target": "es2017"
+    }
+  }

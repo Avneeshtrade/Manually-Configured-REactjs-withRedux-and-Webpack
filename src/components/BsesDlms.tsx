@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import dlmsfile from 'D:\\BSES\\00 Export data\\08_Dec_2021_11_23_30_DLMS\\19507249\\19507249_20211004_20211202.csv';
+const dlmsfile = require("./asset/19505148_20210331_20210514.csv");
+//D:/BSES/00 Export data/08_Dec_2021_11_23_30_DLMS/19507249/19507249_20211004_20211202.csv
+
 const DLMSReport = () => {
     const [state, setState] = useState({ header: [], body: [] })
+
+    const [css,setCss] = useState({color:'blue',innerHeight:'100px'})
     // console.log("file",dlmsfile);
     useEffect(() => {
         let header, body;
@@ -16,9 +20,9 @@ const DLMSReport = () => {
         }
     }, dlmsfile)
     return (
-        <div>
+        <div style={css}>
             <h1>Dlms Report Here</h1>
-            <table border={2} cellSpacing={0}>
+            <table >
                 <thead>
                     <tr>
                         {
@@ -51,9 +55,6 @@ const DLMSReport = () => {
                 }
                     
                 </tbody>
-                <tfoot>
-
-                </tfoot>
             </table>
         </div>
     )

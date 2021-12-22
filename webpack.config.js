@@ -1,7 +1,7 @@
 const path = require('path');
 console.log(__dirname);
 let config = {
-    entry: [path.join(__dirname, 'src', 'index.js')],
+    entry: [path.join(__dirname, 'src', 'index.tsx')],
     output: {
         path: path.resolve(__dirname,"dist"),
         //publicPath: path.join(__dirname,"dist/"),
@@ -50,6 +50,9 @@ let config = {
                 type: 'asset/resource',
                 exclude: '/node_modules'
             },
+            { test: /\.(ts|tsx)$/,
+              loader: 'awesome-typescript-loader' 
+            }
         ]
 
     },
@@ -64,7 +67,7 @@ let config = {
         allowedHosts: 'all',
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx','.tsx','.ts']
     }
 }
 module.exports = (env, argv) => {

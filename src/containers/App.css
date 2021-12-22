@@ -1,8 +1,19 @@
 .header{
-    background-color: aquamarine;
     /* background-image: url('.\\images\\TFTLOGO.PNG'); */
-    width:80vw;
-    height:80vh;
-    justify-content: center;
-    overflow:scroll;
+}
+
+.loading{
+    position: fixed;
+    box-sizing: border-box;
+    inset: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: rgb(232, 232, 232);
+    font-family: Menlo, Consolas, monospace;
+    font-size: large;
+    padding: 2rem;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    overflow: auto;
 }

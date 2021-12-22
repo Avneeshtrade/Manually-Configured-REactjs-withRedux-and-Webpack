@@ -3,8 +3,15 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import fetchRobots from '../actions/robotActions';
 
+interface reducerProps {
+    RobotReducer:{
+        loading:boolean,
+        data:string,
+        error:string
+    }
+}
 const RobotDemo = () => {
-    const robots = useSelector(state => state.RobotReducer);
+    const robots = useSelector((state:reducerProps)=> state.RobotReducer);
     const dispatch = useDispatch();
     const [search,setString] = useState({text:"ewrre"});
     const changeHandler = (e) =>{
@@ -14,7 +21,7 @@ const RobotDemo = () => {
         dispatch(fetchRobots(search.text.trim()));
     },[search])
     return (
-        <div>
+        <div style={{height:'50vh'}}>
             robots are shown here
             {
                 robots.data && <img src={robots.data} />

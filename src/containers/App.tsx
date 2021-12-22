@@ -4,8 +4,8 @@ import RobotDemo from '../components/RobotDemo';
 import './App.css';
 const App = (prop) =>{
     return (
-        <div className='header'>
-            {/* <DLMSReport /> */}
+        <div>
+            <DLMSReport />
             <RobotDemo />
         </div>
     )
