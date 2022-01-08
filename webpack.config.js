@@ -1,7 +1,7 @@
 const path = require('path');
 console.log(__dirname);
 let config = {
-    entry: [path.join(__dirname, 'src', 'index.tsx')],
+    entry: ['babel-polyfill',path.join(__dirname, 'src', 'index')],
     output: {
         path: path.resolve(__dirname,"dist"),
         //publicPath: path.join(__dirname,"dist/"),
@@ -63,6 +63,7 @@ let config = {
        // ContentBase:path.join(__dirname,'./dist'),
        // onListening:(e)=>{console.log(e);},
         port: 9000,
+        historyApiFallback: true,
         liveReload:true,
         allowedHosts: 'all',
     },

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "\"npm run build\" && \"npm run dev\"",
+    "start": "\"npm run dev\"",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --open"
   },
@@ -24,6 +24,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^6.5.1",
     "csv-loader": "^3.0.3",
     "redux-logger": "^3.0.6",
@@ -37,6 +38,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1"
   }

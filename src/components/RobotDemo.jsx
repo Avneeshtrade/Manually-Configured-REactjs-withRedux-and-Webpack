@@ -3,15 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import fetchRobots from '../actions/robotActions';
 
-interface reducerProps {
-    RobotReducer:{
-        loading:boolean,
-        data:string,
-        error:string
-    }
-}
 const RobotDemo = () => {
-    const robots = useSelector((state:reducerProps)=> state.RobotReducer);
+    const robots = useSelector((state)=> state.RobotReducer);
     const dispatch = useDispatch();
     const [search,setString] = useState({text:"ewrre"});
     const changeHandler = (e) =>{

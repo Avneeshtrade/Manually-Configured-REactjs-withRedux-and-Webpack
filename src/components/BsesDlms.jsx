@@ -6,7 +6,7 @@ const DLMSReport = () => {
     const [state, setState] = useState({ header: [], body: [] })
 
     const [css,setCss] = useState({color:'blue',innerHeight:'100px'})
-    // console.log("file",dlmsfile);
+
     useEffect(() => {
         let header, body;
         [header, ...body] = dlmsfile;

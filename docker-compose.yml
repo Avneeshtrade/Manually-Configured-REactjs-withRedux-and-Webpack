@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  frontend:
+    container_name: react_app
+    build: ./
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./:/app
+    environment:
+      FLASK_ENV: production
+
+  db:
+    container_name: postgresdb
+    build: ./postgres/
+    ports: 
+      - "5432:5432"
+    
